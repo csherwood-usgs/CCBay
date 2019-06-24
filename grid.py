@@ -557,7 +557,7 @@ def buildGrid(xp,yp,alp,dx,dy,mxc,myc):
     return X, Y
 def buildROMSGrid(xp,yp,alp,dx,dy,Lm,Mm):
     '''
-    X, Y = buildGrid(xp,yp,alp,dx,dy,Lm,Mm) builds a rectangular grid
+    X, Y = buildROMSGrid(xp,yp,alp,dx,dy,Lm,Mm) builds a rectangular grid
 
     Input :
         xp: x grid origin
@@ -578,6 +578,8 @@ def buildROMSGrid(xp,yp,alp,dx,dy,Lm,Mm):
     x = np.arange(xp-dx,xp+xlen+2.*dx,dx)
     y = np.arange(yp-dy,yp+ylen+2.*dy,dy)
 
+    xu = np.arange(x[0]+dx/2.,x[-2]+dx/2,dx)
+    print(np)
     X,Y = np.meshgrid(x,y);
     X = X-xp
     Y = Y-yp
